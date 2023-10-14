@@ -1,0 +1,76 @@
+<<!doctype html>
+<html>
+  <head>
+    <title>Movie Recommendation System</title>
+    <style>
+      /* Style the body */
+      body {
+        background-image: url('movie_image.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      /* Style the header */
+      h1 {
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      /* Style the search form */
+      form {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+      }
+      
+      /* Style the search input field */
+      input[type="text"] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #555;
+      }
+      
+      /* Style the search button */
+      input[type="submit"] {
+        width: 20%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      
+      /* Style the search button when hovered over */
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Movie Recommendation System</h1>
+    <form action="{{ url_for('recommend') }}" method="POST">
+      <label for="movie_title">Enter a movie title:</label>
+      <br>
+      <input type="text" name="movie_title" id="movie_title" required>
+      <br><br>
+      <input type="submit" value="Recommend">
+    </form>
+  </body>
+</html>
+
+
+
+
